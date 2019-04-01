@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book-O-Rama Book Entry Results</title>
+</head>
+<body>
+<h1>Book-O-Rama Book Entry Results</h1>
 <?php
 
 # keep track of what we want to tell the user
@@ -52,17 +59,8 @@ if (!isset($_POST['ISBN']) || !isset($_POST['Author'])
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
         echo "<br/>Any extended information: " . $e->errorInfo . "\n";
-        exit;
     }
 }
 ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Book-O-Rama Book Entry Results</title>
-</head>
-<body>
-<h1>Book-O-Rama Book Entry Results</h1>
-<?php echo $message; ?>
 </body>
 </html>
